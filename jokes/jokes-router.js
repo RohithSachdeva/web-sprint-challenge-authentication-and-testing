@@ -1,8 +1,8 @@
 const axios = require('axios');
-
 const router = require('express').Router();
+const checkToken = require('../auth/authenticate-middleware.js');
 
-router.get('/', (req, res) => {
+router.get('/', checkToken, (req, res) => {
   const requestOptions = {
     headers: { accept: 'application/json' },
   };
@@ -18,3 +18,16 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
+
+
+//guided project brings in middleware for router
+
+// const restricted = require("../auth/restricted-middleware.js");
+
+// router.get("/", restricted, (req, res) => {
+//     Users.find()
+//         .then(users => {
+//             res.status(200).json({ data: users });
+//         })
+//         .catch(err => res.send(err));
+// });
