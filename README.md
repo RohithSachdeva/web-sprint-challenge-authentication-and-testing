@@ -26,11 +26,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+1a. JWT's allow the authentication status to be verified on every subsequent HTTP request.  JWTs are cryptographically signed, typically using a secret with the HMACSHA-256 algorithm.  Token based authentication will store locally on the browser so there is no need for a dedicated server to store your sessions (less cost/maintenance for companies).      
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+2a. Hashes them with a complicated algorithm that causes the password to usually become something EXTREMELY different when stored in a database.
 
 3. How are unit tests different from integration and end-to-end testing.
 
+3a. Unit tests isolate small units of software.  These are usually simple and fast to execute.  End to end test usually test data access and have to perform operations/run queries.  These are typically larger and run slower.    
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+4a.  Test driven development is the approach to development where you write/formulate tests before writing code...  This helps you approach how to write the code more logically.  You write a test .. confirm it fails.. write code to pass the test... keep refactoring as you create more complicated tests/codes.  
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
